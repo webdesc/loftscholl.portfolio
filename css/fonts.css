@@ -1,0 +1,40 @@
+@font-face {
+	font-family: firasans-regular;
+	src: url('fonts/firasans-regular.eot');
+	src: url('fonts/firasans-regular.eot?') format('eot'),
+	url('fonts/firasans-regular.woff') format('woff'),
+	url('fonts/firasans-regular.ttf') format('truetype'),
+	url('fonts/firasans-regular.svg#firasans-regular') format('svg');
+}
+@font-face {
+	font-family: firasans-light;
+	src: url('fonts/firasans-light.eot');
+	src: url('fonts/firasans-light.eot?') format('eot'),
+	url('fonts/firasans-light.woff') format('woff'),
+	url('fonts/firasans-light.ttf') format('truetype'),
+	url('fonts/firasans-light.svg#firasans-light') format('svg');
+}
+@font-face {
+	font-family: firasans-book;
+	src: url('fonts/firasans-book.eot');
+	src: url('fonts/firasans-book.eot?') format('eot'),
+	url('fonts/firasans-book.woff') format('woff'),
+	url('fonts/firasans-book.ttf') format('truetype'),
+	url('fonts/firasans-book.svg#firasans-book') format('svg');
+}
+@font-face {
+	font-family: firasans-bold;
+	src: url('fonts/firasans-bold.eot');
+	src: url('fonts/firasans-bold.eot?') format('eot'),
+	url('fonts/firasans-bold.woff') format('woff'),
+	url('fonts/firasans-bold.ttf') format('truetype'),
+	url('fonts/firasans-bold.svg#firasans-bold') format('svg');
+}
+@font-face {
+	font-family: proximanovacond-semibold;
+	src: url('fonts/proximanovacond-semibold.eot');
+	src: url('fonts/proximanovacond-semibold.eot?') format('eot'),
+	url('fonts/proximanovacond-semibold.woff') format('woff'),
+	url('fonts/proximanovacond-semibold.ttf') format('truetype'),
+	url('fonts/proximanovacond-semibold.svg#proximanovacond-semibold') format('svg');
+}

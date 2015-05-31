@@ -20,10 +20,17 @@ gulp.task('css', function () {
   gulp.src('css/*.css')
     .pipe(concatCss('bundle.css'))
     .pipe(autoprefixer('last 2 version', '> 1%', 'ie 9'))
+    .pipe(gulp.dest('app/css/'))
+    //.pipe(notify('Done!'))
+    .pipe(connect.reload());
+});
+
+// minify-сss
+gulp.task('minify-сss', function () {
+  gulp.src('app/css/bundle.css')
     .pipe(minifyCss())
     .pipe(rename('bundle.min.css'))
     .pipe(gulp.dest('app/css/'))
-    //.pipe(notify('Done!'))
     .pipe(connect.reload());
 });
 
@@ -34,9 +41,10 @@ gulp.task('html', function () {
 });
 // watch
 gulp.task('watch', function () {
-	gulp.watch('css/*.css', ['css'])
+  gulp.watch('css/*.css', ['css'])
+  gulp.watch('app/css/bundle.css', ['minify-сss'])
 	gulp.watch('app/index.html', ['html'])
 });
 
 // default
-gulp.task('default', ['connect', 'html', 'css', 'watch']);
+gulp.task('default', ['connect', 'html', 'css', 'minify-сss', 'watch']);

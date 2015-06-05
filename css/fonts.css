@@ -15,6 +15,14 @@
 	url('fonts/firasans-light.svg#firasans-light') format('svg');
 }
 @font-face {
+	font-family: firasans-lightitalic;
+	src: url('fonts/firasans-lightitalic.eot');
+	src: url('fonts/firasans-lightitalic.eot?') format('eot'),
+	url('fonts/firasans-lightitalic.woff') format('woff'),
+	url('fonts/firasans-lightitalic.ttf') format('truetype'),
+	url('fonts/firasans-lightitalic.svg#firasans-lightitalic') format('svg');
+}
+@font-face {
 	font-family: firasans-book;
 	src: url('fonts/firasans-book.eot');
 	src: url('fonts/firasans-book.eot?') format('eot'),

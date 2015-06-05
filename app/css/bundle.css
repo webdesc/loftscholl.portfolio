@@ -17,6 +17,15 @@
 }
 
 @font-face {
+  font-family: firasans-lightitalic;
+  src: url("fonts/firasans-lightitalic.eot");
+  src: url("fonts/firasans-lightitalic.eot?") format('eot'),
+	url("fonts/firasans-lightitalic.woff") format('woff'),
+	url("fonts/firasans-lightitalic.ttf") format('truetype'),
+	url("fonts/firasans-lightitalic.svg#firasans-lightitalic") format('svg');
+}
+
+@font-face {
   font-family: firasans-book;
   src: url("fonts/firasans-book.eot");
   src: url("fonts/firasans-book.eot?") format('eot'),
@@ -80,33 +89,18 @@ h6 {
   font-weight: normal;
 }
 
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 26px;
-}
-
-h3 {
-  font-size: 22px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}
-
 mark {
   background-color: transparent;
   font-weight: bold;
+}
+
+a {
+  color: #3ba8c0;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* icons */
@@ -118,7 +112,8 @@ mark {
 [class*='icon-']:before {
   content: ' ';
   display: inline-block;
-  background: url("../img/icons.png") no-repeat;
+  background-image: url("../img/icons.png");
+  background-repeat: no-repeat;
   z-index: 1000;
 }
 
@@ -162,6 +157,12 @@ mark {
   background-position: 0 -457px;
   width: 20px;
   height: 20px;
+}
+
+.icon-project:before {
+  background-position: 0 -343px;
+  width: 32px;
+  height: 32px;
 }
 
 /* grid на будущее */
@@ -290,7 +291,9 @@ mark {
   height: 100%;
   font-size: 0;
   outline: none;
-  background: url("../img/icon-socials.png") 0 0 no-repeat;
+  background-image: url("../img/icon-socials.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .social-item .social-link.vk-link {
@@ -350,31 +353,42 @@ mark {
 .sidemenu-list {
   list-style: none;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   background-color: #eff3f7;
 }
 
 .sidemenu-list .sidemenu-item {
-  padding: 24px 14px;
-  border-top: 2px solid #3ba8c0;
+  margin: -2px 0 0;
+  padding: 0;
 }
 
-.sidemenu-list .sidemenu-item:first-child {
+.sidemenu-list .sidemenu-item:first-child a {
   border-top: none;
 }
 
 .sidemenu-list .sidemenu-item a {
+  display: block;
   font-size: 20px;
   line-height: 24px;
+  margin: 0 10px;
+  padding: 24px 14px;
+  border-top: 2px solid #3ba8c0;
   color: #959aa8;
   text-decoration: none;
   -webkit-transition: color 0.3s linear;
           transition: color 0.3s linear;
 }
 
-.sidemenu-list .sidemenu-item a:hover,
-.sidemenu-list .sidemenu-item a.active {
+.sidemenu-list .sidemenu-item a:hover {
   color: #3ba8c0;
+}
+
+.sidemenu-list .sidemenu-item.active {
+  background-color: #3ba8c0;
+}
+
+.sidemenu-list .sidemenu-item.active a {
+  color: #fff;
 }
 
 .author-contacts {
@@ -446,10 +460,8 @@ mark {
 
 .content {
   position: relative;
-}
-
-.l-sidebar + .content {
-  margin-left: 280px;
+  float: right;
+  width: 650px;
 }
 
 .section-content {
@@ -641,4 +653,190 @@ mark {
 .cf:after,
 .row:after {
   clear: both;
+}
+.case-list {
+  text-align: left;
+  margin: 0 -13px;
+  padding: 0;
+}
+
+.case-list .case-list-item {
+  display: inline-block;
+  width: 182px;
+  height: 204px;
+  margin: 12px;
+  text-align: center;
+  font-family: 'firasans-light', sans-serif;
+  vertical-align: top;
+}
+
+.case-list-item .preview-case-item {
+  position: relative;
+  border: 2px solid #3ba8c0;
+  border-radius: 6px;
+  height: 130px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.case-list-item .preview-case-item:before {
+  /* для IE8+ */
+  content: "";
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.case-list-item .preview-case-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  opacity: 0;
+  background-color: #016ca4;
+  background-color: rgba(1, 108, 164, 0.7);
+  z-index: 2;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+}
+
+.preview-case-item .preview-case-img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.preview-case-item .preview-case-title {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  color: #fff;
+  font-size: 0;
+  font-family: 'firasans-book', sans-serif;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  vertical-align: middle;
+  z-index: 3;
+  -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
+}
+
+.preview-case-item:hover .preview-case-title {
+  font-size: 16px;
+  border-color: #fff;
+}
+
+.preview-case-item:hover:after {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.case-list-item .preview-case-link {
+  display: inline-block;
+  margin: 6px auto;
+  font-size: 13px;
+  font-family: 'firasans-lightitalic', sans-serif;
+}
+
+.case-list-item .preview-case-description {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.case-list-item .add-case-item {
+  border-width: 1px;
+  border-style: dashed;
+  background-color: #edf8fc;
+  cursor: pointer;
+}
+
+.case-list-item .icon-project:before {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  height: 32px;
+  margin-left: -16px;
+}
+
+@-webkit-keyframes crash-icon {
+  20% {
+    top: 160px;
+  }
+
+  100% {
+    top: 34px;
+  }
+}
+
+@keyframes crash-icon {
+  20% {
+    top: 160px;
+  }
+
+  100% {
+    top: 34px;
+  }
+}
+
+@-webkit-keyframes opacity-title {
+  20% {
+    color: #edf8fc;
+  }
+
+  60% {
+    color: #ddf2fa;
+  }
+
+  100% {
+    color: #3ba8c0;
+  }
+}
+
+@keyframes opacity-title {
+  20% {
+    color: #edf8fc;
+  }
+
+  60% {
+    color: #ddf2fa;
+  }
+
+  100% {
+    color: #3ba8c0;
+  }
+}
+
+.case-list-item .icon-project:hover:before {
+  -webkit-animation: crash-icon 0.6s linear 0s 1 normal none;
+          animation: crash-icon 0.6s linear 0s 1 normal none;
+}
+
+.case-list-item .icon-project:hover .add-case-title {
+  -webkit-animation: opacity-title 0.6s linear 0s 1 normal none;
+          animation: opacity-title 0.6s linear 0s 1 normal none;
+}
+
+.case-list-item .icon-project:after {
+  display: none;
+}
+
+.case-list-item .add-case-title {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  text-align: center;
+  color: #3ba8c0;
+  font-size: 13px;
+  font-family: 'firasans-light', sans-serif;
 }

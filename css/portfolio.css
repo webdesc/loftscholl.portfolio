@@ -1,0 +1,120 @@
+.case-list {
+	text-align: left;
+	margin: 0 -13px;
+	padding: 0;
+}
+.case-list .case-list-item {
+	display: inline-block;
+	width: 182px; height: 204px;
+	margin: 12px;
+	text-align: center;
+	font-family: 'firasans-light', sans-serif;
+	vertical-align: top;
+}
+	.case-list-item .preview-case-item {
+		position: relative;
+		border: 2px solid #3ba8c0;
+		border-radius: 6px;
+		height: 130px;
+		text-align: center;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+	.case-list-item .preview-case-item:before { /* для IE8+ */
+		content: "";
+		display: inline-block;
+		min-height: inherit;
+		height: 100%;
+		vertical-align: middle;
+	}
+	.case-list-item .preview-case-item:after {
+		content: "";
+		display: block;
+		position: absolute;
+		opacity: 0;
+		background-color: #016ca4;
+		background-color: rgba(1, 108, 164, 0.7);
+		z-index: 2;
+		transition: all 0.2s linear;
+	}
+		.preview-case-item .preview-case-img {
+			position: absolute;
+			width: 100%;
+			left: 0; top: 0;
+		}
+		.preview-case-item .preview-case-title {
+			position: relative;
+			display: inline-block;
+			padding: 4px;
+			color: #fff;
+			font-size: 0;
+			font-family: 'firasans-book', sans-serif;
+			border-radius: 4px;
+			border: 2px solid transparent;
+			text-decoration: none;
+			vertical-align: middle;
+			z-index: 3;
+			transition: all 0.2s linear;
+		}
+		.preview-case-item:hover .preview-case-title {
+			font-size: 16px;
+			border-color: #fff
+		}
+		.preview-case-item:hover:after {
+			opacity: 1;
+			left: 0; right: 0; top: 0; bottom: 0;
+		}
+		.case-list-item .preview-case-link {
+			display: inline-block;
+			margin: 6px auto;
+			font-size: 13px;
+			font-family: 'firasans-lightitalic', sans-serif;
+		}
+		.case-list-item .preview-case-description {
+			display: block;
+			font-size: 15px;
+			line-height: 18px;
+			height: 36px;
+			overflow: hidden;
+		}
+
+		.case-list-item .add-case-item {
+			border-width: 1px;
+			border-style: dashed;
+			background-color: #edf8fc;
+			cursor: pointer;
+			
+		}
+		.case-list-item .icon-add-case:before {
+			position: absolute;
+			top: 34px; left: 50%; height: 32px;
+			margin-left: -16px;
+			
+		}
+		@keyframes crash-icon {
+			20% { top: 160px; }
+			100% { top: 34px; }
+		}
+		@keyframes opacity-title {
+			20% { color: #edf8fc; }
+			60% { color: #ddf2fa; }
+			100% { color: #3ba8c0; }
+		}
+		.case-list-item .icon-add-case:hover:before {
+			animation: crash-icon 0.6s linear 0s 1 normal none;
+		}
+		.case-list-item .icon-add-case:hover .add-case-title {
+			animation: opacity-title 0.6s linear 0s 1 normal none;
+		}
+		.case-list-item .icon-add-case:after {
+			display: none;
+		}
+		.case-list-item .add-case-title {
+			display: block;
+			position: absolute;
+			left: 0; right: 0; top: 80px;
+			text-align: center;
+			color: #3ba8c0;
+			font-size: 13px;
+			font-family: 'firasans-light', sans-serif;
+		}

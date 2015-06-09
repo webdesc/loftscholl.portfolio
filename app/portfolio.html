@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Webdesc portfolio</title>
+	<link rel="stylesheet" href="bower/normalize.css/normalize.css">
+	<link rel="stylesheet" href="css/bundle.min.css">
+	<script type="text/javascript" src="bower/modernizer/modernizr.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="main">
+
+			<header class="page-header">
+				<div class="container">
+					<div class="logo-header">
+						<a href="/" class="link-home"><img src="img/logo.png" alt="LoftSchool"></a>
+					</div>
+					<ul class="socials">
+						<li class="social-item"><a href="#" class="social-link vk-link">Vkontakte</a></li>
+						<li class="social-item"><a href="#" class="social-link tw-link">Twitter</a></li>
+						<li class="social-item"><a href="#" class="social-link fb-link">Facebook</a></li>
+						<li class="social-item"><a href="#" class="social-link gh-link">Kotik</a></li>
+					</ul>
+				</div>
+			</header>
+
+			<div class="container cf">
+
+				<!-- content -->
+				<div class="content">
+					<section class="section-content">
+						<h2 class="section-content-title">Мои работы</h2>
+						<div class="section-info-box">
+							<ul class="case-list">
+								<li class="case-list-item">
+									<div class="preview-case-item">
+										<img class="preview-case-img" src="img/preview-case-1.jpg" alt="">
+										<a href="#" class="preview-case-title">Название работы</a>
+									</div>
+									<a class="preview-case-link" href="#">www.site.ru</a>
+									<span class="preview-case-description">Информация о проекте, пару слов, не больше, ну может 2 строки...</span>
+								</li>
+								<li class="case-list-item">
+									<div class="preview-case-item">
+										<img class="preview-case-img" src="img/preview-case-2.jpg" alt="">
+										<a href="#" href="#"class="preview-case-title">Название работы</a>
+									</div>
+									<a class="preview-case-link" href="#">www.site.ru</a>
+									<span class="preview-case-description">Информация о проекте, пару слов, не больше, ну может 2 строки...</span>
+								</li>
+								<li class="case-list-item">
+									<div class="preview-case-item">
+										<img class="preview-case-img" src="img/preview-case-3.jpg" alt="">
+										<a href="#" class="preview-case-title">Название работы</a>
+									</div>
+									<a class="preview-case-link" href="#">www.site.ru</a>
+									<span class="preview-case-description">Информация о проекте, пару слов, не больше, ну может 2 строки...</span>
+								</li>
+								<li class="case-list-item">
+									<div class="preview-case-item">
+										<img class="preview-case-img" src="img/preview-case-4.jpg" alt="">
+										<a href="#" class="preview-case-title">Название работы</a>
+									</div>
+									<a class="preview-case-link" href="#">www.site.ru</a>
+									<span class="preview-case-description">Информация о проекте, пару слов, не больше, ну может 2 строки...</span>
+								</li>
+								<li class="case-list-item">
+									<div class="preview-case-item add-case-item icon-add-case show-modal" data-modal="popup_add_case">
+										<span class="add-case-title">Добавить проект</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+				<!-- / content -->
+
+				<!-- left sidebar -->
+				<aside class="l-sidebar">
+					<nav class="sidemenu">
+						<ul class="sidemenu-list">
+							<li class="sidemenu-item "><a class="sidemenu-item-link" href="/">Обо мне</a></li>
+							<li class="sidemenu-item active"><a class="sidemenu-item-link" href="portfolio.html">Мои работы</a></li>
+							<li class="sidemenu-item "><a class="sidemenu-item-link" href="contacts.html">Связаться со мной</a></li>
+						</ul>
+					</nav>
+					<address class="author-contacts">
+						<header class="address-title">Контакты</header>
+						<ul class="contacts-list">
+							<li class="contact-item email"><a class="icon-email" href="mailto:webdesc@gmail.com">webdesc@gmail.com</a></li>
+							<li class="contact-item phone"><a class="icon-phone" href="tel:+79269066891">+7(926)906-68-91</a></li>
+							<li class="contact-item skype"><a class="icon-skype" href="skype:webdesc">webdesc</a></li>
+						</ul>
+					</address>
+				</aside>
+				<!-- / left sidebar -->
+
+			</div>
+
+		</div>
+		<!-- / main -->
+
+	</div>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="lock-auth icon-look"><a href="#">Авторизация</a></div>
+			<div class="copyright">© 2015. Несанкционированное копирование засоряет ваши чакры, будьте бдительны.</div>
+		</div>
+	</footer>
+
+	<!-- modal add case -->
+	<div class="modal-wrp">
+		<div class="modal" id="popup_add_case">
+			<header class="modal-header">
+				<h3 class="modal-header-title">Добавление проекта</h3>
+				<div class="modal-close icon-close">Закрыть</div>
+			</header>
+			<section class="modal-body">
+				<form action="#" method="POST" class="modal-form" id="form_add_case">
+					<div class="form-field">
+						<label class="form-label">Название проекта</label>
+						<div class="form-control">
+							<input type="text" class="form-input" placeholder="Введите название">
+						</div>
+					</div>
+					<div class="form-field field-file-upload">
+						<label class="form-label">
+							<span class="label-title">Картинка проекта</span>
+							<div class="form-control">
+								<div class="button-file-upload icon-add-file">Выбрать</div>
+								<mark class="fake-input-text">Файл не выбран</mark>
+								<input type="file" class="form-input" placeholder="Загрузите изображение">
+							</div>
+						</label>
+					</div>
+					<div class="form-field">
+						<label class="form-label">URL проекта</label>
+						<div class="form-control">
+							<input type="text" class="form-input" placeholder="Добавьте ссылку">
+						</div>
+					</div>
+					<div class="form-field">
+						<label class="form-label">Описание</label>
+						<div class="form-control">
+							<textarea class="form-input" placeholder="Пара слов о вашем проекте"></textarea>
+						</div>
+					</div>
+					<div class="form-field form-field-submit">
+						<div class="form-control">
+							<input type="submit" value="Добавить" class="button">
+						</div>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+	<!-- / modal add case -->
+
+	<!-- подключение js -->
+	<script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

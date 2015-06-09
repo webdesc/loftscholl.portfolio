@@ -27,6 +27,14 @@ mark { background-color: transparent; font-weight: bold; }
 a { color: #3ba8c0; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* fonts */
+.firasans-regular { font-family: 'firasans-regular', sans-serif; }
+.firasans-light { font-family: 'firasans-light', sans-serif; }
+.firasans-lightitalic { font-family: 'firasans-lightitalic', sans-serif; }
+.firasans-book { font-family: 'firasans-book', sans-serif; }
+.firasans-bold { font-family: 'firasans-bold', sans-serif; }
+.proximanovacond-semibold { font-family: 'proximanovacond-semibold', sans-serif; }
+
 /* icons */
 [class*='icon-'] { font-size: 0; }
 [class*='icon-']:before {
@@ -36,14 +44,17 @@ a:hover { text-decoration: underline; }
 	background-repeat: no-repeat;
 	z-index: 1000;
 }
-.icon-case:before { background-position: 0 0; width: 36px; height: 34px; } 
-.icon-docs:before { background-position: 0 -84px; width: 26px; height: 32px; } 
-.icon-email:before { background-position: 0 -166px; width: 21px; height: 16px; } 
-.icon-hat:before { background-position: 0 -232px; width: 41px; height: 23px; } 
-.icon-look:before { background-position: 0 -305px; width: 20px; height: 32px; } 
-.icon-phone:before { background-position: 0 -387px; width: 19px; height: 20px; } 
-.icon-skype:before { background-position: 0 -457px; width: 20px; height: 20px; } 
-.icon-project:before { background-position: 0 -343px; width: 32px; height: 32px; } 
+
+.icon-add-case:before { width: 32px; height: 32px; background-position: -5px -5px; }
+.icon-add-file:before { width: 32px; height: 24px; background-position: -47px -5px; }
+.icon-case:before { width: 36px; height: 34px; background-position: -47px -39px; }
+.icon-close:before { width: 25px; height: 25px; background-position: -5px -83px; }
+.icon-docs:before { width: 26px; height: 32px; background-position: -93px -5px; }
+.icon-email:before { width: 21px; height: 16px; background-position: -5px -47px; }
+.icon-hat:before { width: 41px; height: 23px; background-position: -93px -47px; }
+.icon-look:before { width: 20px; height: 32px; background-position: -93px -80px; }
+.icon-phone:before { width: 19px; height: 21px; background-position: -129px -5px; }
+.icon-skype:before { width: 20px; height: 20px; background-position: -123px -80px; }
 
 /* grid на будущее */
 
@@ -122,11 +133,11 @@ a:hover { text-decoration: underline; }
 	.social-item .social-link.vk-link { background-position: 0 0; }
 	.social-item .social-link.tw-link { background-position: -48px 0; }
 	.social-item .social-link.fb-link { background-position: -96px 0; }
-	.social-item .social-link.hz-link { background-position: -145px 0; }
+	.social-item .social-link.gh-link { background-position: -145px 0; }
 	.social-item .social-link.vk-link:hover { background-position: 0 -47px; }
 	.social-item .social-link.tw-link:hover { background-position: -48px -47px; }
 	.social-item .social-link.fb-link:hover { background-position: -96px -47px; }
-	.social-item .social-link.hz-link:hover { background-position: -145px -47px; }
+	.social-item .social-link.gh-link:hover { background-position: -145px -47px; }
 
 /* sidebar */
 
@@ -318,7 +329,7 @@ a:hover { text-decoration: underline; }
 	}
 	.experience-list-item .item-description {
 		font-size: 15px;
-		font-family: 'firasans-light', sanf-serif;
+		font-family: 'firasans-light', sans-serif;
 	}
 
 /* footer */
@@ -348,7 +359,7 @@ a:hover { text-decoration: underline; }
 	top: 36px;
 	text-align: center;
 	font-size: 14px;
-	font-family: 'firasans-light', sanf-serif;
+	font-family: 'firasans-light', sans-serif;
 }
 
 

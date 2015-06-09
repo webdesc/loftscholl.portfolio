@@ -19,7 +19,7 @@ gulp.task('connect', function() {
 gulp.task('css', function () {
   gulp.src('css/*.css')
     .pipe(concatCss('bundle.css'))
-    .pipe(autoprefixer('last 2 version', '> 1%', 'ie 9'))
+    .pipe(autoprefixer('last 2 version', 'ie 8', 'ie 9'))
     .pipe(gulp.dest('app/css/'))
     //.pipe(notify('Done!'))
     .pipe(connect.reload());
@@ -36,15 +36,23 @@ gulp.task('minify-сss', function () {
 
 // html
 gulp.task('html', function () {
-	gulp.src('app/index.html')
-	.pipe(connect.reload());
+  gulp.src('app/*.html')
+  .pipe(connect.reload());
 });
+
+// js
+gulp.task('js', function () {
+  gulp.src('app/js/*.js')
+  .pipe(connect.reload());
+});
+
 // watch
 gulp.task('watch', function () {
   gulp.watch('css/*.css', ['css'])
   gulp.watch('app/css/bundle.css', ['minify-сss'])
-	gulp.watch('app/index.html', ['html'])
+  gulp.watch('app/*.html', ['html'])
+	gulp.watch('app/js/*.js', ['js'])
 });
 
 // default
-gulp.task('default', ['connect', 'html', 'css', 'minify-сss', 'watch']);
+gulp.task('default', ['connect', 'html', 'css', 'minify-сss', 'js', 'watch']);

@@ -44,35 +44,28 @@
 							<form action="#" method="POST" class="form-content">
 								<div class="form-field form-field-cols-2">
 									<div class="field-col-item">
-										<label class="form-label">Имя</label>
+										<label class="form-label">Имя:</label>
 										<div class="form-control">
 											<input type="text" class="form-input" placeholder="Как к Вам обращаться">
 										</div>
 									</div>
 									<div class="field-col-item">
-										<label class="form-label">E-mail</label>
+										<label class="form-label">E-mail:</label>
 										<div class="form-control">
 											<input type="text" class="form-input" placeholder="Куда мне писать">
 										</div>
 									</div>
 								</div>
 								<div class="form-field">
-									<label class="form-label">Сообщение</label>
+									<label class="form-label">Сообщение:</label>
 									<div class="form-control">
 										<textarea class="form-input form-textarea-big" placeholder="Пара слов о вашем проекте"></textarea>
 									</div>
 								</div>
-								<div class="form-field form-field-cols-2">
-									<label class="form-label">Введите код, указанный на картинке</label>
-									<div class="field-col-item">
-										<div class="form-control">
-											<input type="text" class="form-input" placeholder="Как к Вам обращаться">
-										</div>
-									</div>
-									<div class="field-col-item">
-										<div class="form-control">
-											<input type="text" class="form-input" placeholder="Введите код">
-										</div>
+								<div class="form-field">
+									<label class="form-label">Докажите что вы не робот:</label>
+									<div class="form-control">
+										<div class="g-recaptcha" data-sitekey="6LchFggTAAAAAGM7jUwnZV9-5Ow7XgENbfTXnnGb"></div>
 									</div>
 								</div>
 								<div class="form-field form-field-cols-2 form-field-submit">
@@ -131,5 +124,7 @@
 	<script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<div class="g-recaptcha" data-sitekey="your_site_key"></div>
 </body>
 </html>

@@ -62,6 +62,7 @@ textarea { resize: none; }
 	border: 1px solid #48cbe8;
 	background-color: #fbfcfd;
 	outline: none;
+	white-space: nowrap;
 }
 .form-input::-webkit-input-placeholder { color: #48cbe8; }
 .form-input:-moz-placeholder { color: #48cbe8; }

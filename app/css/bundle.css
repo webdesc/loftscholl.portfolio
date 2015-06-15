@@ -143,6 +143,7 @@ textarea {
   border: 1px solid #48cbe8;
   background-color: #fbfcfd;
   outline: none;
+  white-space: nowrap;
 }
 
 .form-input::-webkit-input-placeholder {
@@ -959,6 +960,7 @@ a:hover {
   right: 0;
   top: 0;
   bottom: 0;
+  background-color: #666;
   background-color: rgba(0,0,0,0.7);
   z-index: 1000;
 }

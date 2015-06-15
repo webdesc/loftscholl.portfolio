@@ -96,3 +96,18 @@ var fileUpload = (function(){
 	}
 
 })();
+
+// validate
+/*var validator = (function(){
+
+	//var form = $('')
+
+	return {
+		init: function(){
+			this.setupListeners();
+		},
+		setupListeners: function(){
+			form.on('submit', validationForm);
+		}
+	}
+})();*/

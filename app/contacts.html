@@ -45,21 +45,21 @@
 								<div class="form-field form-field-cols-2">
 									<div class="field-col-item">
 										<label class="form-label">Имя:</label>
-										<div class="form-control">
-											<input type="text" class="form-input" placeholder="Как к Вам обращаться">
+										<div class="form-control l-part">
+											<input type="text" class="form-input" data-required="true" placeholder="Как к Вам обращаться">
 										</div>
 									</div>
 									<div class="field-col-item">
 										<label class="form-label">E-mail:</label>
-										<div class="form-control">
-											<input type="text" class="form-input" placeholder="Куда мне писать">
+										<div class="form-control r-part">
+											<input type="text" class="form-input" data-required="true" placeholder="Куда мне писать">
 										</div>
 									</div>
 								</div>
 								<div class="form-field">
 									<label class="form-label">Сообщение:</label>
 									<div class="form-control">
-										<textarea class="form-input form-textarea-big" placeholder="Пара слов о вашем проекте"></textarea>
+										<textarea class="form-input form-textarea-big" data-required="true" placeholder="Пара слов о вашем проекте"></textarea>
 									</div>
 								</div>
 								<div class="form-field">
@@ -76,7 +76,7 @@
 									</div>
 									<div class="field-col-item txt-right">
 										<div class="form-control">
-											<input type="submit" value="Очистить" class="button button-bray">
+											<input type="reset" value="Очистить" class="button button-bray">
 										</div>
 									</div>
 								</div>
@@ -122,6 +122,7 @@
 
 	<!-- подключение js-библиотек -->
 	<script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower/jquery.placeholder.js/jquery.placeholder.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>

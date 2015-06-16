@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+	$('.form-input').placeholder();
 	
 	// инициализируем модули
 	if ($('.modal').length) {
@@ -6,6 +8,9 @@ $(document).ready(function(){
 	}
 	if ($('.field-file-upload').length) {
 		fileUpload.init();
+	}
+	if ($('form').length) {
+		validator.init();
 	}
 
 });

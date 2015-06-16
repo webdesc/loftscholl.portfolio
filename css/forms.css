@@ -26,6 +26,9 @@ textarea { resize: none; }
 .form-field {
 	margin: 0 0 10px;
 }
+.form-control {
+	position: relative;
+}
 .form-field-cols-2 {
 	margin-left: -10px;
 	margin-right: -10px;
@@ -76,6 +79,39 @@ textarea.form-input {
 }
 textarea.form-textarea-big {
 	height: 180px;
+}
+
+.form-input.invalid {
+	border-color: #f97e76;
+	background-color: #fad2d1;
+}
+.form-control .tooltip {
+	position: absolute;
+	display: inline-block;
+	top: 50%; left: -130px;
+	padding: 0 16px; margin-top: -13px;
+	height: 26px; line-height: 26px;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+	background-color: #f97e76;
+}
+.form-control .tooltip:before {
+	content: '';
+	position: absolute;
+	top: 50%; right: -6px;
+	margin-top: -5px;
+	border-left: 6px solid #f97e76;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+.form-control.r-part .tooltip {
+	left: auto; right: -130px;
+}
+.form-control.r-part .tooltip:before {
+	right: auto; left: -6px;
+	border-left: none;
+	border-right: 6px solid #f97e76;
 }
 
 .field-file-upload {

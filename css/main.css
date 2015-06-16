@@ -279,23 +279,6 @@ a:hover { text-decoration: underline; }
 }
 .section-info-box { }
 
-.section-form-auth {
-	position: relative;
-	margin: 10px auto 20px;
-	padding: 24px;
-	width: 590px; height: 488px;
-	border-radius: 5px;
-	box-shadow: 0 1px 5px #cbcdcc;
-	background-color: #eff3f7;
-}
-.section-form-auth .section-content-header {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	margin-bottom: 20px;
-}
-.section-form-auth .section-content-title {
-	font-size: 2.5em;
-}
 
 .author-userpic {
 	position: relative;

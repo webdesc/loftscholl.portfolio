@@ -127,7 +127,7 @@
 					<div class="form-field">
 						<label class="form-label">Название проекта</label>
 						<div class="form-control">
-							<input type="text" class="form-input" placeholder="Введите название">
+							<input type="text" class="form-input" data-required="true" placeholder="Введите название">
 						</div>
 					</div>
 					<div class="form-field field-file-upload">
@@ -136,20 +136,20 @@
 							<div class="form-control">
 								<div class="button-file-upload icon-add-file">Выбрать</div>
 								<mark class="fake-input-text">Файл не выбран</mark>
-								<input type="file" class="form-input" placeholder="Загрузите изображение">
+								<input type="file" class="form-input" data-required="true" placeholder="Загрузите изображение">
 							</div>
 						</label>
 					</div>
 					<div class="form-field">
 						<label class="form-label">URL проекта</label>
 						<div class="form-control">
-							<input type="text" class="form-input" placeholder="Добавьте ссылку">
+							<input type="text" class="form-input" data-required="true" placeholder="Добавьте ссылку">
 						</div>
 					</div>
 					<div class="form-field">
 						<label class="form-label">Описание</label>
 						<div class="form-control">
-							<textarea class="form-input" placeholder="Пара слов о вашем проекте"></textarea>
+							<textarea class="form-input" data-required="true" placeholder="Пара слов о вашем проекте"></textarea>
 						</div>
 					</div>
 					<div class="form-field form-field-submit">
@@ -165,6 +165,7 @@
 
 	<!-- подключение js -->
 	<script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower/jquery.placeholder.js/jquery.placeholder.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

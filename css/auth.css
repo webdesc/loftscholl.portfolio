@@ -1,0 +1,31 @@
+.section-form-auth {
+	position: fixed;
+	left: 50%; top: 50%;
+	margin: -284px 0 0 -295px;
+	padding: 24px;
+	width: 590px; height: 488px;
+	border-radius: 5px;
+	box-shadow: 0 1px 5px #cbcdcc;
+	background-color: #eff3f7;
+}
+.section-form-auth .section-content-header {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+.section-form-auth .section-content-title {
+	font-size: 2.5em;
+}
+.section-form-auth:after {
+	content: '';
+	position: relative;
+	width: 100%; height: 500px;
+}
+
+@media screen and (max-height: 600px) {
+	.section-form-auth {
+		position: relative;
+		margin: 20px auto 0;
+		left: auto; top: auto;
+	}
+}

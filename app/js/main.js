@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('.form-input').placeholder();
+	//$('.form-input').placeholder();
 	
 	// инициализируем модули
 	if ($('.modal').length) {

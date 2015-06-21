@@ -122,24 +122,48 @@ var validator = (function(){
 		var reqInput = $(this).find('[data-required="true"]');
 		if (reqInput) {
 			reqInput.each(function(){
-				if ($(this).val() == '') {
+				if ($(this).val() === '') {
 					$(this).addClass('invalid').before(tooltip);
 				} else {
-					$(this).removeClass('invalid').parent().find('.tooltip').remove();
+					if ($(this).data('type') === 'email') {
+						var email = $(this).val();
+							if (!regExpEmail(email)) {
+								$(this).addClass('invalid').before('<div class="tooltip">Некорректный email</div>');
+							} else {
+								$(this).removeClass('invalid').parent().find('.tooltip').remove();
+							}
+					} else {
+						$(this).removeClass('invalid').parent().find('.tooltip').remove();
+					}
 				}
 			});
 		};
 	};
 
+	function regExpEmail(email) {
+		var regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/;
+			if (regExp.test(email)) {
+				return true;
+			} else {
+				return false;
+			}
+
+	};
+
 	function clearForm(e){
 		e.preventDefault();
-		var tooltips = form.find('.tooltip'),
+		var allInputs = form.find('input[type="email"], input[type="text"], textarea'),
+			tooltips = form.find('.tooltip'),
 			invalidInputs = inputs.filter('.invalid');
 		if (tooltips.length || invalidInputs.length) {
-			console.log('clear');
 			invalidInputs.removeClass('invalid');
 			tooltips.remove();
 		}
+		if (allInputs) {
+			allInputs.each(function(){
+				$(this).val('');
+			});
+		};
 	};
 
 	function removeInvalid() {

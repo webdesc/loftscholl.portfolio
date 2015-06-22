@@ -103,8 +103,8 @@ var validator = (function(){
 
 	var form = $('form'),
 		inputs = form.find('.form-input'),
-		clear = form.find('input[type="reset"]'),
-		tooltip = '<div class="tooltip">Заполните поле</div>';
+		clear = form.find('input[type="reset"]');
+		//tooltip = '<div class="tooltip">Заполните поле</div>';
 
 	return {
 		init: function(){
@@ -119,16 +119,21 @@ var validator = (function(){
 
 	function validationForm(e){
 		e.preventDefault();
+		var invalidInputs = inputs.filter('.invalid');
+		if (invalidInputs) {
+			invalidInputs.removeClass('invalid').parent().find('.tooltip').remove();
+		}
 		var reqInput = $(this).find('[data-required="true"]');
 		if (reqInput) {
 			reqInput.each(function(){
 				if ($(this).val() === '') {
-					$(this).addClass('invalid').before(tooltip);
+					//$(this).addClass('invalid').before(tooltip);
+					tooltip($(this));
 				} else {
 					if ($(this).data('type') === 'email') {
 						var email = $(this).val();
 							if (!regExpEmail(email)) {
-								$(this).addClass('invalid').before('<div class="tooltip">Некорректный email</div>');
+								tooltip($(this), 'email');
 							} else {
 								$(this).removeClass('invalid').parent().find('.tooltip').remove();
 							}
@@ -138,6 +143,31 @@ var validator = (function(){
 				}
 			});
 		};
+	};
+
+	function tooltip(input, email) {
+		var input = input,
+			oldTooltip = input.parent().find('.tooltip'),
+			labelText = input.parent().prev('.form-label').text().replace(':', ''),
+			tooltip = '',
+			checkEmail = input.data('type'),
+			rPart = input.parent().hasClass('r-part');
+			input.removeClass('invalid');
+			oldTooltip.remove();
+			console.log(labelText);
+		if (email === 'email') {
+			tooltip = '<div class="tooltip">Некорректный e-mail</div>';
+		} else {
+			tooltip = '<div class="tooltip">Заполните поле "'+labelText+'"</div>';
+		}
+		input.addClass('invalid').before(tooltip);
+		var thisTT = input.prev('.tooltip'),
+			marginTT = thisTT.width() + 40;
+		if (rPart) {
+			thisTT.css('right', '-'+marginTT+'px');
+		} else {
+			thisTT.css('left', '-'+marginTT+'px');
+		}
 	};
 
 	function regExpEmail(email) {
